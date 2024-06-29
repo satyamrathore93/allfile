@@ -1,0 +1,13 @@
+
+
+
+  cloud_pct  = response.cloud_pct 
+  temp =response.temp
+  feels_like =response.feels_like
+  humidity =response.humidity
+  min_temp =response.min_temp
+  max_tem =response.max_tem
+  wind_speed =response.wind_speed
+  wind_degree =response.wind_degree
+  sunrise =response.sunrise
+  sunset =response.sunset

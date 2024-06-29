@@ -1,0 +1,24 @@
+/* Write your code here: */
+  /* grouping selector */
+h1 ,h2{  
+    color: blueviolet;
+}
+  /* child selector */
+
+.box>.done{
+   color: firebrick;
+}
+
+  /* descedent  selector */
+.box .list{
+    color: blue;
+}
+/* chaining selectors*/
+li.done{
+    color: seagreen;
+}
+/* combining selectors*/
+
+ul  p.done{
+    font-size: .5rem;
+}

@@ -1,0 +1,34 @@
+async function fetchData() {
+    const url = 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Seattle';
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'a8d1a60eefmsh8fd302ab1b06891p1c484bjsn09cec4b0a9a1',
+            'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
+        }
+    };
+
+    try {
+        const response = await fetch(url, options);
+        const data = await response.json(); // Parse the response as JSON
+
+        // Update the DOM elements with weather data
+        document.getElementById('cloud_pct').innerHTML = data.cloud_pct;
+        document.getElementById('temp').innerHTML = data.temp;
+        document.getElementById('feels_like').innerHTML = data.feels_like;
+        document.getElementById('humidity').innerHTML = data.humidity;
+        document.getElementById('min_temp').innerHTML = data.min_temp;
+        document.getElementById('max_temp').innerHTML = data.max_temp;
+        document.getElementById('wind_speed').innerHTML = data.wind_speed;
+        document.getElementById('wind_degrees').innerHTML = data.wind_degrees;
+        document.getElementById('sunrise').innerHTML = data.sunrise;
+        document.getElementById('sunset').innerHTML = data.sunset;
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+// Call the async function
+fetchData();
+
+time stamp 28 minute
